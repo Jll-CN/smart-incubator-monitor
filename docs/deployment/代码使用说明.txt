@@ -1,0 +1,14 @@
+小程序前端代码使用：
+./frontend/miniprogram 文件夹直接导入到微信开发者工具即可
+确保miniprogram是项目的根目录
+
+小程序后端代码使用：
+导入./backend/esp32_end文件夹到vscode
+
+运行所需东西
+​	nodejs环境
+​	建立库esp32_records和esp32_data表
+
+框架连接MySQL默认账号密码为root/admin，如有不同，需要自行修改
+执行npm install安装依赖
+依赖安装完成后执行npm start运行后端服务

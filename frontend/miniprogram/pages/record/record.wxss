@@ -1,0 +1,9 @@
+.page-container {
+  width: 100vw;
+  height: 92vh;
+}
+.picker-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 10rpx 72rpx;
+}

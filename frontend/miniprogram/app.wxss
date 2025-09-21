@@ -1,0 +1,28 @@
+/**app.wxss**/
+.container {
+  min-height: 100vh;
+  background-color: RGB(242, 242, 242);
+}
+
+.flex {
+  display: flex;
+}
+
+.head_box {
+  display: flex;
+  /* justify-content: center; */
+  padding-top: 120rpx;
+}
+
+.head_box > image {
+  margin-left: 32rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.head_box > view {
+  margin-left: 15rpx;
+  font-size: 38rpx;
+  font-weight: 600;
+  line-height: 100rpx;
+}

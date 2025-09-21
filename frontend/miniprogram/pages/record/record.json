@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "record_chart": "../../components/record_chart/record_chart"
+  },
+  "navigationBarTitleText": "记录",
+  "navigationStyle": "default"
+}

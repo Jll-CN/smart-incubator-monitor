@@ -1,0 +1,29 @@
+.select-box {
+  margin: 38rpx 32rpx 0;
+  box-shadow: 0 8rpx 20rpx 0 rgba(0, 0, 0, 0.3);
+  border-radius: 32rpx;
+  padding: 20rpx;
+  background-color: #ffffff;
+}
+
+.title {
+  text-align: center;
+  font-size: 44rpx;
+  margin-bottom: 20rpx;
+}
+
+.picker-box {
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.list-mode {
+  background-color: #ffffff;
+  margin: 38rpx 32rpx 0;
+  box-shadow: 0 8rpx 20rpx 0 rgba(0, 0, 0, 0.3);
+  border-radius: 32rpx;
+}
+
+.picker-font-color {
+  color: #969799;
+}

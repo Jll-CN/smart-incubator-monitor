@@ -1,0 +1,35 @@
+function strIndexOf(weatherText, text) {
+  //str.indexOf("")的值为-1时表示不包含
+  if (weatherText) {
+    if (weatherText.indexOf(text) !== -1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+function findImgByWeather(weatherText) {
+  if (weatherText === "晴") {
+    return "/images/weather/qing.png";
+  } else if (weatherText === "多云") {
+    return "/images/weather/duoyun.png";
+  } else if (weatherText === "阴") {
+    return "/images/weather/duoyun.png";
+  } else if (weatherText === "雷") {
+    return "/images/weather/lei.png";
+  } else if (weatherText === "冰雹") {
+    return "/images/weather/bingbao.png";
+  } else if (weatherText.indexOf("雨") !== -1) {
+    return "/images/weather/yu.png";
+  } else if (weatherText.indexOf("雪") !== -1) {
+    return "/images/weather/xue.png";
+  } else if (weatherText.indexOf("霾") !== -1) {
+    return "/images/weather/duoyun.png";
+  }
+}
+
+module.exports = {
+  strIndexOf: strIndexOf,
+  findImgByWeather: findImgByWeather
+};

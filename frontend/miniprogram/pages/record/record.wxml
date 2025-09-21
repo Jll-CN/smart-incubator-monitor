@@ -1,0 +1,20 @@
+<view class="page-container">
+  <picker
+    mode="date"
+    value="{{timeValue}}"
+    start="2024-01-01"
+    end="2034-01-01"
+    bindchange="bindDateChange"
+  >
+    <view class="picker-box">
+      <view> 查询日期： </view>
+      <view class="picker-font-color">{{timeValue}}</view>
+    </view>
+  </picker>
+  <record_chart
+    is-need-get-data
+    sensor-zh-name="{{sensorZhName}}"
+    search-data="{{timeValue}}"
+    wx:if="{{showChart}}"
+  />
+</view>

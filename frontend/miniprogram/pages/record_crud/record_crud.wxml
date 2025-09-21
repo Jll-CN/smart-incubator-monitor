@@ -1,0 +1,63 @@
+<view class="container">
+  <view class="head_box">
+    <image src="/images/head.png" mode="" />
+    <view>{{title}}</view>
+  </view>
+
+  <view class="select-box">
+    <view class="title"
+      >历史数据查询
+      <van-icon style="margin-left: 40rpx" bind:tap="selectData" name="replay" />
+    </view>
+
+    <picker
+      mode="date"
+      value="{{timeValue}}"
+      start="2024-01-01"
+      end="2034-01-01"
+      bindchange="bindDateChange"
+    >
+      <view class="picker-box">
+        <view> 查询日期： </view>
+        <view class="picker-font-color">{{timeValue}}</view>
+      </view>
+    </picker>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{sensorNameList}}">
+      <view class="picker-box">
+        <view> 传感器名：</view>
+        <view class="picker-font-color">{{sensorNameList[sensorNameIndex]}} </view>
+      </view>
+    </picker>
+    <picker bindchange="bindrevealTypeChange" value="{{revealTypeIndex}}" range="{{revealList}}">
+      <view class="picker-box">
+        <view> 展示模式：</view>
+        <view class="picker-font-color">{{revealList[revealTypeIndex]}} </view>
+      </view>
+    </picker>
+  </view>
+
+  <!-- 列表模式 -->
+  <view wx:if="{{revealTypeIndex===0}}" class="list-mode">
+    <scroll-view scroll-y="true" style="height: calc(100vh - 620rpx)">
+      <van-cell-group inset border="{{false}}">
+        <van-cell
+          wx:for="{{sersorInfoList}}"
+          title="{{item.sensor_value + sensorMap[sensorNameEnValue]}}"
+          wx:key="item"
+          data-id="{{item.id}}"
+          data-value="{{item.sersor_value}}"
+          bind:longpress="delRecord"
+          bind:tap="updateRecord"
+          value="{{item.create_time}}"
+        />
+      </van-cell-group>
+    </scroll-view>
+  </view>
+  <!-- 图表模式 -->
+  <view
+    wx:if="{{revealTypeIndex === 1 && showChart}}"
+    style="height: calc(100vh - 530rpx); margin: 0 2rpx 4rpx"
+  >
+    <record_chart chart-data="{{sersorInfoList}}" />
+  </view>
+</view>
